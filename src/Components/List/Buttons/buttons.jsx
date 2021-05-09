@@ -13,11 +13,11 @@ export default function Buttons(props) {
   function urlGenerator(value) {
     switch (value) {
       case "incorrect":
-        return "&is_incorrect='true'";
+        return "&is_incorrect=true";
       case "untagged":
-        return "&is_untagged='true'";
+        return "&is_untagged=true";
       case "disabled":
-        return "&id_disabled='true'";
+        return "&id_disabled=true";
       default:
         return "";
     }
