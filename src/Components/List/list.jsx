@@ -107,7 +107,7 @@ export default function List() {
       }
     }
     getData();
-  }, [pager.page]);
+  }, [pager.page, GetURL]);
 
   // Observer APi for loading next page recipes
   let bottomBoundaryRef = useRef(null);
