@@ -95,7 +95,7 @@ export default function List() {
             cogs: `${item.cogs}%`,
             costPrice: item.cost_price.toFixed(3),
             salePrice: item.sale_price.toFixed(3),
-            grossMargin: item.gross_margin.toFixed(3),
+            grossMargin: `${item.gross_margin.toFixed(3)}%`,
             tagsAction: "none",
           })
         );

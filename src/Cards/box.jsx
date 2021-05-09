@@ -53,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 15,
     marginTop: 10,
     color: "#888f94",
-    fontWeight: "bold",
   },
   elementBar: {
     margin: "auto",
