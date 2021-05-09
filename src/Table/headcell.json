@@ -1,0 +1,39 @@
+ [
+    {
+      "id'": "name",
+      "numeric'": false,
+      "disablePadding": true,
+      "label": "Name"
+    },
+    {
+      "id": "LAST UPDATED",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "LAST UPDATED"
+    },
+    { "id": "COGS%", "numeric": true, "disablePadding": false, "label": "COGS%" },
+    {
+      "id": "COST PRICE()",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "COST PRICE()"
+    },
+    {
+      "id": "SALE PRICE",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "SALE PRICE"
+    },
+    {
+      "id": "GROSS MARGIN",
+      "numeric": true,
+      "disablePadding": false,
+      "label": "GROSS MARGIN"
+    },
+    {
+      "id": "TAGS/ACTIONS",
+      "numeric": false,
+      "disablePadding": false,
+      "label": "TAGS/ACTIONS"
+    }
+]
