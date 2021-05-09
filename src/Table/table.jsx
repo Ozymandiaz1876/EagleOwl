@@ -21,6 +21,7 @@ const StyledTableCell = withStyles((theme) => ({
   },
   body: {
     fontSize: 14,
+    color: "#9BA3A9",
   },
 }))(TableCell);
 
@@ -148,13 +149,13 @@ export default function Tables(props) {
                     key={data.id}
                     selected={isItemSelected}
                   >
-                    <TableCell padding="checkbox">
+                    <StyledTableCell padding="checkbox">
                       <Checkbox
                         checked={isItemSelected}
                         inputProps={{ "aria-labelledby": labelId }}
                       />
-                    </TableCell>
-                    <TableCell
+                    </StyledTableCell>
+                    <StyledTableCell
                       component="th"
                       id={labelId}
                       scope="row"
@@ -163,16 +164,24 @@ export default function Tables(props) {
                       {data.name.length < 35
                         ? data.name
                         : `${data.name.slice(0, 35)}...`}
-                    </TableCell>
-                    <TableCell align="right">{data.lastUpdate}</TableCell>
-                    <TableCell align="right">{data.cogs}</TableCell>
-                    <TableCell align="right">{data.costPrice}</TableCell>
-                    <TableCell align="right">{data.salePrice}</TableCell>
-                    <TableCell align="right">{data.grossMargin}</TableCell>
-                    <TableCell align="right">
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {data.lastUpdate}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">{data.cogs}</StyledTableCell>
+                    <StyledTableCell align="right">
+                      {data.costPrice}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {data.salePrice}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {data.grossMargin}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
                       <Chip label="Tag1" color="primary" />
                       <Chip label="Tag2" color="secondary" />
-                    </TableCell>
+                    </StyledTableCell>
                   </TableRow>
                 );
               })}
