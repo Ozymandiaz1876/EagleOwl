@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Grid from "@material-ui/core/Grid";
-import { URL_MARGIN_GROUP, URL_FLUCTUATING_GROUP } from "../../Config/config";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -10,17 +9,16 @@ function Box(props) {
   const [data, setData] = useState({ data: [], fetching: true });
 
   //fetch data and change state
-  async function fetchData(url) {
-    const res = await fetch(`${url}`);
+  useEffect(() => {
+    async function getData() {
+      const res = await fetch(props.url);
 
-    const { results } = await res.json();
+      const { results } = await res.json();
 
-    setData({ data: results, fetching: false });
-  }
-
-  props.index === 0 && fetchData(`${URL_MARGIN_GROUP}&order=top`);
-  props.index === 1 && fetchData(`${URL_MARGIN_GROUP}&order=bottom`);
-  props.index === 2 && fetchData(`${URL_FLUCTUATING_GROUP}&order=top`);
+      setData({ data: results, fetching: false });
+    }
+    getData();
+  }, [props.url]);
 
   const classes = useStyles();
 
